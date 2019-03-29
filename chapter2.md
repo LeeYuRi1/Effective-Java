@@ -248,7 +248,7 @@ String s = “bikini”;
   sum변수를 Long으로 선언해서 불필요한 인스턴스가 약 231개나 만들어진다. <br>
   long으로 바꿔주면 훨씬 빨라진다.<br>
 
-  박싱된 기본 타입보다는 기본 타입을 사용하고, 의도치 않은 오토박싱이 숨어들지 않도록 주의해야한다.<br>
+  박싱된 기본 타입보다는 기본 타입을 사용하고, 의도치 않은 오토박싱이 숨어들지 않도록 주의해야한다.<br><br>
 
   
 
@@ -263,7 +263,7 @@ String s = “bikini”;
 자바는 가비지 컬렉터를 갖추고 있지만 메모리 누수 문제가 일어날 수 있다.<br>
 그럴 경우, 프로그램을 오래 실행하다 보면 가비지 컬렉션 활동과 메모리 사용량이 늘어나 성능이 저하될 것이다.<br>
 객체 참조를 살려두면 몇 개의 객체가 많은 객체를 회수되지 못하게 할 수 있고 성능에 악영향을 줄 수 있다.<br>
-<br>
+
 
 
 - ### null 처리<br>
@@ -276,7 +276,7 @@ String s = “bikini”;
 
   **일반적으로 자기 메모리를 직접 관리하는 클래스라면 메모리누수에 주의해야 한다.**<br>
 
-  <br>
+  
 
 - ### 캐시<br>
 
@@ -285,7 +285,7 @@ String s = “bikini”;
 
   WeakHashMap는 이 경우에만 유용하기 때문에 백그라운드 스레드, LinkedHashMap의removeEldestEntry메서드, java.lang.ref 패키지를 활용하는 방법이 있다.<br>
 
-  <br>
+  
 
 - ### listener 혹은 callback<br>
 
@@ -315,7 +315,7 @@ String s = “bikini”;
 
   Final 클래스들은 하위 클래스를 만들 수 없으니 안전하다. <br>
   Final이 아닌 클래스를 finalizer 공격으로부터 방어하려면 아무 일도 하지 않는 finalizer메서드를 만들고 final로 선언하면 된다.<br>
-<br>
+
 
 
 ### Finailzer나 cleaner를 대신해줄 묘안은?<br>
@@ -323,7 +323,7 @@ String s = “bikini”;
 AutoCloseable을 구현해주고, 클라이언트에서 인스턴스를 다 쓰고 나면 close 메서드를 호출하면 된다. <br>
 각 인스턴스는 자신이 닫혔는지를 추적하는 것이 좋다. <br>
 
-<br>
+
 
 ### 그렇다면 finailzer와 cleaner는 어디서 쓰이는가?<br>
 
@@ -339,7 +339,7 @@ AutoCloseable을 구현해주고, 클라이언트에서 인스턴스를 다 쓰�
   그렇지 않다면 close 메서드를 사용해야한다.<br>
 
 
-
+<br><br>
 
 
 ## 아이템9. Try-finally보다는 try-with-resources를 사용하라<br>
