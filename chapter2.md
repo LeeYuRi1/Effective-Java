@@ -316,14 +316,14 @@ String s = “bikini”;
   Final 클래스들은 하위 클래스를 만들 수 없으니 안전하다. <br>
   Final이 아닌 클래스를 finalizer 공격으로부터 방어하려면 아무 일도 하지 않는 finalizer메서드를 만들고 final로 선언하면 된다.<br>
 
-
+<br>
 
 ### Finailzer나 cleaner를 대신해줄 묘안은?<br>
 
 AutoCloseable을 구현해주고, 클라이언트에서 인스턴스를 다 쓰고 나면 close 메서드를 호출하면 된다. <br>
 각 인스턴스는 자신이 닫혔는지를 추적하는 것이 좋다. <br>
 
-
+<br>
 
 ### 그렇다면 finailzer와 cleaner는 어디서 쓰이는가?<br>
 
